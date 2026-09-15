@@ -1,0 +1,883 @@
+/* SignalScope Media Forensics Platform - SIH 2026 Problem Statement 2 */
+/* Light Mode First Aesthetics, Glassmorphism, and Interactive Forensic Styles */
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+  /* Primary Brand Colors */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-accent: #6366f1;
+  --color-accent-pink: #ec4899;
+
+  /* Light Mode Palette (Default) */
+  --bg-main: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.96);
+  --border-card: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Mesh Gradient Background (Matching User Screenshot) */
+.hero-mesh-bg {
+  background:
+    radial-gradient(at 10% 15%, rgba(216, 180, 254, 0.35) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(244, 114, 182, 0.25) 0px, transparent 45%),
+    radial-gradient(at 50% 60%, rgba(199, 210, 254, 0.30) 0px, transparent 55%),
+    radial-gradient(at 85% 85%, rgba(147, 197, 253, 0.35) 0px, transparent 50%),
+    #ffffff;
+}
+
+.dark .hero-mesh-bg {
+  background:
+    radial-gradient(at 10% 15%, rgba(126, 34, 206, 0.25) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(190, 24, 93, 0.18) 0px, transparent 45%),
+    radial-gradient(at 50% 60%, rgba(30, 58, 138, 0.25) 0px, transparent 55%),
+    #020617;
+}
+
+/* Sightengine Style Hero & Login Section Background (Matching User Screenshot) */
+.hero-sightengine-bg {
+  background-color: #17152e;
+  background: radial-gradient(149.92% 70.76% at 74.44% 35.49%, #301469 0%, #17152e 100%);
+  border-bottom-left-radius: 44px;
+  border-bottom-right-radius: 44px;
+}
+
+.sightengine-headline-gradient {
+  background-image: linear-gradient(89.72deg, #ffa0f0 5%, rgb(179, 205, 255) 28%, rgb(191, 232, 255) 40%, #d4a1ff 93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-sightengine-demo {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sightengine-demo:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-sightengine-primary {
+  background-image: linear-gradient(89.72deg, #3235ba 5%, #508cff 93%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 6px 18px rgba(50, 53, 186, 0.35);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sightengine-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(50, 53, 186, 0.5);
+}
+
+/* Background Grids */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.10) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.glow-ambient {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(99, 102, 241, 0.06) 40%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .glow-ambient {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(139, 92, 246, 0.12) 40%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Glassmorphism Cards (Light Mode Default) */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+.dark .glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.dark .glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Floating Badges on Hero Login Card */
+.floating-badge {
+  position: absolute;
+  z-index: 25;
+  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.12);
+  animation: floatSlow 3.5s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Login Card Shake / Pulse Animation on Unauthenticated Scroll */
+.login-card-pulse {
+  animation: cardAttention 0.85s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes cardAttention {
+
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-6px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(6px);
+  }
+}
+
+/* Drag & Drop Over */
+.drag-over {
+  border-color: #4f46e5 !important;
+  background-color: rgba(79, 70, 229, 0.04) !important;
+  box-shadow: 0 0 30px -5px rgba(79, 70, 229, 0.25) !important;
+  transform: scale(1.006);
+}
+
+/* Scanning Scanline Animation */
+.scanning-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4f46e5, #2563eb, transparent);
+  box-shadow: 0 0 15px #4f46e5;
+  animation: scanlineMove 2s infinite ease-in-out;
+}
+
+@keyframes scanlineMove {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+
+  50% {
+    top: 98%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: calc(100vw - 48px);
+}
+
+.toast {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  padding: 13px 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.16);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: toastIn 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-warning {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1.5px solid #f59e0b;
+  box-shadow: 0 12px 30px -5px rgba(245, 158, 11, 0.35);
+}
+
+.dark .toast-warning {
+  background: #231b0f;
+  color: #fef3c7;
+  border-color: #d97706;
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.4);
+}
+
+.toast-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1.5px solid #ef4444;
+  box-shadow: 0 12px 30px -5px rgba(239, 68, 68, 0.35);
+}
+
+.dark .toast-error {
+  background: #241113;
+  color: #fee2e2;
+  border-color: #dc2626;
+}
+
+.dark .toast {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes toastIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Code Preview Terminal */
+.code-terminal {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.code-header {
+  background: #1e293b;
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+}
+
+.code-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.code-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #ef4444;
+}
+
+.dot-yellow {
+  background: #f59e0b;
+}
+
+.dot-green {
+  background: #10b981;
+}
+
+/* Grad-CAM Canvas Overlay */
+#gradcam-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 0.75rem;
+  mix-blend-mode: multiply;
+}
+
+.dark #gradcam-canvas-overlay {
+  mix-blend-mode: screen;
+}
+
+/* Heatmap Table Cell Coloring */
+.heatmap-cell {
+  position: relative;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Sightengine-Style Capabilities Showcase Animations & Styles
+   ========================================================================== */
+
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+
+  50% {
+    top: 92%;
+    opacity: 0.9;
+  }
+
+  100% {
+    top: 0%;
+    opacity: 0.2;
+  }
+}
+
+.animate-laser-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.9), rgba(129, 140, 248, 0.9), transparent);
+  box-shadow: 0 0 16px 3px rgba(56, 189, 248, 0.6);
+  animation: laserScan 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floatSmooth {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-smooth {
+  animation: floatSmooth 5s ease-in-out infinite;
+}
+
+@keyframes pulseTarget {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 12px rgba(56, 189, 248, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+  }
+}
+
+.animate-target-pulse {
+  animation: pulseTarget 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bubbleFloatA {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(0.5deg);
+  }
+}
+
+@keyframes bubbleFloatB {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(-0.5deg);
+  }
+}
+
+.animate-bubble-a {
+  animation: bubbleFloatA 6s ease-in-out infinite;
+}
+
+.animate-bubble-b {
+  animation: bubbleFloatB 7s ease-in-out infinite 1s;
+}
+
+/* Sightengine Action Pill Buttons */
+.btn-sightengine-navy {
+  background-color: #0f172a;
+  color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sightengine-navy:hover {
+  background-color: #1e293b;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
+}
+
+.dark .btn-sightengine-navy {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.dark .btn-sightengine-navy:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+}
+
+.btn-sightengine-outline {
+  background-color: transparent;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sightengine-outline:hover {
+  border-color: #0f172a;
+  transform: translateY(-1.5px);
+}
+
+.dark .btn-sightengine-outline {
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.dark .btn-sightengine-outline:hover {
+  border-color: #94a3b8;
+}
+
+/* ==========================================================================
+   Full-Website Scroll-Reveal Animations (Every Time: Down = Original, Up = Reverse)
+   ========================================================================== */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+[data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition-property: opacity, transform;
+  transition-duration: 0.68s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- SCROLL DOWN (ORIGINAL ANIMATION): Left from left, right from right, up from bottom --- */
+[data-reveal="left"] {
+  transform: translateX(-65px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(65px);
+}
+
+[data-reveal="up"] {
+  transform: translateY(45px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.93) translateY(30px);
+}
+
+/* --- SCROLL UP (REVERSE ANIMATION): Enters from opposite top direction --- */
+html[data-scroll-dir="up"] [data-reveal="left"]:not(.revealed) {
+  transform: translateX(-65px) translateY(-30px);
+  opacity: 0;
+}
+
+html[data-scroll-dir="up"] [data-reveal="right"]:not(.revealed) {
+  transform: translateX(65px) translateY(-30px);
+  opacity: 0;
+}
+
+html[data-scroll-dir="up"] [data-reveal="up"]:not(.revealed) {
+  transform: translateY(-45px);
+  opacity: 0;
+}
+
+html[data-scroll-dir="up"] [data-reveal="scale"]:not(.revealed) {
+  transform: scale(0.93) translateY(-30px);
+  opacity: 0;
+}
+
+/* Mobile responsive subtle offset to prevent overflow */
+@media (max-width: 640px) {
+
+  [data-reveal="left"],
+  html[data-scroll-dir="up"] [data-reveal="left"]:not(.revealed) {
+    transform: translateX(-35px);
+  }
+
+  [data-reveal="right"],
+  html[data-scroll-dir="up"] [data-reveal="right"]:not(.revealed) {
+    transform: translateX(35px);
+  }
+}
+
+/* Staggered transition delays */
+[data-reveal-delay="100"] {
+  transition-delay: 0.08s;
+}
+
+[data-reveal-delay="150"] {
+  transition-delay: 0.12s;
+}
+
+[data-reveal-delay="200"] {
+  transition-delay: 0.16s;
+}
+
+[data-reveal-delay="250"] {
+  transition-delay: 0.20s;
+}
+
+[data-reveal-delay="300"] {
+  transition-delay: 0.24s;
+}
+
+/* Revealed State: perfectly aligned in its place every time */
+[data-reveal].revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   Modern 3D Interactive Panel Animations & Holographic Elevation
+   ========================================================================== */
+
+.perspective-3d-root {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.panel-3d-active {
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Specular Light Reflection / Glare Overlay */
+.panel-3d-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 35;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  mix-blend-mode: overlay;
+}
+
+/* Multi-plane Parallax Pop-out elements inside cards */
+.layer-3d-pop {
+  transform: translateZ(28px);
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+.layer-3d-pop-high {
+  transform: translateZ(42px);
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+/* Holographic dynamic glass border pulse */
+.holo-border-3d {
+  position: relative;
+}
+
+.holo-border-3d::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.35), rgba(56, 189, 248, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.panel-3d-active:hover.holo-border-3d::before,
+.panel-3d-active:hover .holo-border-3d::before,
+.holo-border-3d:hover::before {
+  opacity: 1;
+}
+
+#inspection-history-list [data-history-id] {
+  cursor: pointer;
+}
+
+#inspection-history-list [data-history-id]:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 0 16px rgba(56, 189, 248, 0.15);
+}
+
+/* 3D floating badge */
+@keyframes float3DSubtle {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotateX(2deg);
+  }
+}
+
+.animate-3d-float {
+  animation: float3DSubtle 5s ease-in-out infinite;
+}
+
+/* History Vault 3D Modal Entrance Animation */
+#inspection-history-modal:not(.hidden) {
+  animation: fadeInModal 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#inspection-history-modal:not(.hidden)>div:last-child {
+  animation: scaleUpModal 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUpModal {
+  from {
+    transform: scale(0.95) translateY(18px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Benchmark Leaderboard & High-Visibility Badge Styles
+   ========================================================================== */
+
+.badge-sota {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px -1px rgba(79, 70, 229, 0.45);
+}
+
+.leaderboard-score-pill {
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.15s ease;
+}
+
+.leaderboard-score-pill:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   Visualizer Studio: Strictly No 3D Tilt or Perspective Animation
+   ========================================================================== */
+#visualizer,
+#visualizer .panel-3d-active,
+#image-relative-wrapper,
+#image-preview-container,
+#visualizer-workspace {
+  transform: none !important;
+  perspective: none !important;
+  transform-style: flat !important;
+}
+
+#visualizer .panel-3d-glare {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* ==========================================================================
+   Login Page Card: Strictly No 3D Animation, Tilt, or Specular Glare
+   ========================================================================== */
+#hero-auth-card,
+#hero-auth-card-content,
+#hero-auth-card-unlocked {
+  transform: none !important;
+  perspective: none !important;
+  transform-style: flat !important;
+}
+
+#hero-auth-card .panel-3d-glare,
+#hero-auth-card-unlocked .panel-3d-glare,
+#hero-auth-card-content .panel-3d-glare {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* ==========================================================================
+   Research Papers Bi-Directional Left/Right Scroll Animations
+   Left part comes from left, right part comes from right.
+   When scrolling up or exiting, they retreat back to their side positions.
+   ========================================================================== */
+#research-papers {
+  overflow-x: clip;
+}
+
+#research-papers [data-reveal="left"] {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+#research-papers [data-reveal="right"] {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+#research-papers [data-reveal="left"].revealed,
+#research-papers [data-reveal="right"].revealed {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+/* Bi-directional retreat: when scrolling up, left cards slide back left, right cards slide back right */
+html[data-scroll-dir="up"] #research-papers [data-reveal="left"]:not(.revealed) {
+  transform: translateX(-100px) !important;
+  opacity: 0 !important;
+}
+
+html[data-scroll-dir="up"] #research-papers [data-reveal="right"]:not(.revealed) {
+  transform: translateX(100px) !important;
+  opacity: 0 !important;
+}
+
+/* Mobile responsive safe translation to prevent viewport horizontal overflow */
+@media (max-width: 640px) {
+  #research-papers [data-reveal="left"],
+  html[data-scroll-dir="up"] #research-papers [data-reveal="left"]:not(.revealed) {
+    transform: translateX(-40px) !important;
+  }
+
+  #research-papers [data-reveal="right"],
+  html[data-scroll-dir="up"] #research-papers [data-reveal="right"]:not(.revealed) {
+    transform: translateX(40px) !important;
+  }
+}

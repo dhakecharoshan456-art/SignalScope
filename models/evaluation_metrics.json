@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETED",
+  "dataset": "SignalScope Held-Out Local Test Set",
+  "evaluation_category": "LOCAL_TEST_SET",
+  "model": "Swin-v2 AI Image Detector",
+  "architecture": "swin_base",
+  "samples": 106,
+  "accuracy": 50.0,
+  "precision": 64.71,
+  "recall": 52.38,
+  "specificity": 72.09,
+  "macro_f1": 61.93,
+  "roc_auc": 61.46,
+  "false_positive_rate": 27.91,
+  "false_negative_rate": 47.62,
+  "confusion_matrix": {
+    "TN": 31,
+    "FP": 12,
+    "FN": 20,
+    "TP": 22,
+    "uncertain": 21
+  },
+  "format_breakdown": {
+    "jpg": {
+      "total": 102,
+      "correct": 51
+    },
+    "png": {
+      "total": 2,
+      "correct": 1
+    },
+    "webp": {
+      "total": 2,
+      "correct": 1
+    }
+  },
+  "notes": "Local development validation set. Official held-out evaluation is performed by competition organizers."
+}

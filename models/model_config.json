@@ -1,0 +1,26 @@
+{
+  "model_name": "Swin-v2 AI Image Detector",
+  "architecture": "swin_base",
+  "hf_model_id": "umm-maybe/AI-image-detector",
+  "input_resolution": [224, 224],
+  "resize_size": 224,
+  "crop_size": 224,
+  "normalization": {
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225]
+  },
+  "decision_threshold": 0.50,
+  "uncertainty_margin": 0.08,
+  "thresholds": {
+    "likely_real_max": 0.42,
+    "uncertain_min": 0.42,
+    "uncertain_max": 0.58,
+    "likely_ai_min": 0.58
+  },
+  "label_mapping": {
+    "artificial": "AI-GENERATED",
+    "human": "REAL"
+  },
+  "legacy_fallback": "resnet50_genimage.pth (Archived legacy checkpoint — not used in official production inference)",
+  "description": "Production Swin Transformer Base AI image detector. Evaluates continuous p_ai probability with calibrated decision boundaries: p_ai < 0.42 Likely Real, 0.42 to 0.58 Uncertain, p_ai > 0.58 Likely AI-Generated."
+}

@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "title": "GenImage: A Million-Scale Benchmark for Detecting AI-Generated Image",
+    "paperUrl": "https://arxiv.org/abs/2306.08571",
+    "githubUrl": "https://github.com/GenImage-Dataset/GenImage",
+    "googleDriveUrl": "https://drive.google.com/drive/folders/1jGt10bwTbhEZuGXLyvrCuxOI0cBqQ1FS?usp=sharing",
+    "baiduUrl": "https://pan.baidu.com/s/1i0OFqYN5i6oFAxeK6bIwRQ",
+    "baiduCode": "ztf1",
+    "gendetArxiv": "https://arxiv.org/abs/2312.08880",
+    "stats": {
+      "totalImages": "1,331,167",
+      "imagePairs": "1,000,000+",
+      "categories": "1,000",
+      "generators": 8,
+      "detectors": 8
+    },
+    "authors": [
+      { "name": "Mingjian Zhu", "affiliation": "Huawei Noah's Ark Lab", "lead": true },
+      { "name": "Hanting Chen", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Qiangyu Yan", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Xudong Huang", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Guanyu Lin", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Wei Li", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Zhijun Tu", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Hailin Hu", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Jie Hu", "affiliation": "Huawei Noah's Ark Lab" },
+      { "name": "Yunhe Wang", "affiliation": "Huawei Noah's Ark Lab", "corresponding": true }
+    ],
+    "generators": [
+      { "name": "Midjourney", "type": "Diffusion & Proprietary SOTA", "family": "Diffusion", "resolution": "1024x1024" },
+      { "name": "Stable Diffusion V1.4", "type": "Latent Diffusion Model", "family": "LDM", "resolution": "512x512" },
+      { "name": "Stable Diffusion V1.5", "type": "Latent Diffusion Model", "family": "LDM", "resolution": "512x512" },
+      { "name": "ADM (Guided Diffusion)", "type": "Ablated Diffusion Model", "family": "Pixel Diffusion", "resolution": "256x256" },
+      { "name": "GLIDE", "type": "Text-Guided Pixel Diffusion", "family": "Pixel Diffusion", "resolution": "256x256" },
+      { "name": "Wukong", "type": "Chinese Text-to-Image Diffusion", "family": "Diffusion", "resolution": "512x512" },
+      { "name": "VQDM (VQ-Diffusion)", "type": "Vector Quantized Diffusion", "family": "Discrete Diffusion", "resolution": "256x256" },
+      { "name": "BigGAN", "type": "Class-Conditional Generative Adversarial Net", "family": "GAN", "resolution": "256x256" }
+    ],
+    "detectors": [
+      { "name": "ResNet-50", "type": "Convolutional Neural Network", "citation": "He et al., CVPR 2016", "repo": "https://github.com/huggingface/pytorch-image-models" },
+      { "name": "DeiT-S", "type": "Vision Transformer (Distilled)", "citation": "Touvron et al., ICML 2021", "repo": "https://github.com/facebookresearch/deit" },
+      { "name": "Swin-T", "type": "Hierarchical Vision Transformer", "citation": "Liu et al., ICCV 2021", "repo": "https://github.com/microsoft/Swin-Transformer" },
+      { "name": "CNNSpot", "type": "Blur & JPEG Augment Detector", "citation": "Wang et al., CVPR 2020", "repo": "https://github.com/PeterWang512/CNNDetection" },
+      { "name": "Spec", "type": "Frequency Spectrum / AutoGAN Detector", "citation": "Frank et al., ICML 2020", "repo": "https://github.com/ColumbiaDVMM/AutoGAN" },
+      { "name": "F3Net", "type": "Frequency-in-Face Dual-Stream Network", "citation": "Qian et al., ECCV 2020", "repo": "https://github.com/yyk-wew/F3Net" },
+      { "name": "GramNet", "type": "Global Texture Enhancement Detector", "citation": "Liu et al., CVPR 2020", "repo": "https://github.com/liuzhengzhe/Global_Texture_Enhancement_for_Fake_Face_Detection_in_the-Wild" },
+      { "name": "GenDet", "type": "Generalizable Detector (State of the Art)", "citation": "Zhu et al., NeurIPS / arXiv 2023", "repo": "https://arxiv.org/abs/2312.08880" }
+    ]
+  },
+  "table3_sd14": [
+    { "method": "ResNet-50", "midjourney": 54.9, "sd14": 99.9, "sd15": 99.7, "adm": 53.5, "glide": 61.9, "wukong": 98.2, "vqdm": 56.6, "biggan": 52.0, "avg": 72.1 },
+    { "method": "DeiT-S", "midjourney": 55.6, "sd14": 99.9, "sd15": 99.8, "adm": 49.8, "glide": 58.1, "wukong": 98.9, "vqdm": 56.9, "biggan": 53.5, "avg": 71.6 },
+    { "method": "Swin-T", "midjourney": 62.1, "sd14": 99.9, "sd15": 99.8, "adm": 49.8, "glide": 67.6, "wukong": 99.1, "vqdm": 62.3, "biggan": 57.6, "avg": 74.8 },
+    { "method": "CNNSpot", "midjourney": 52.8, "sd14": 96.3, "sd15": 95.9, "adm": 50.1, "glide": 39.8, "wukong": 78.6, "vqdm": 53.4, "biggan": 46.8, "avg": 64.2 },
+    { "method": "Spec", "midjourney": 52.0, "sd14": 99.4, "sd15": 99.2, "adm": 49.7, "glide": 49.8, "wukong": 94.8, "vqdm": 55.6, "biggan": 49.8, "avg": 68.8 },
+    { "method": "F3Net", "midjourney": 50.1, "sd14": 99.9, "sd15": 99.9, "adm": 49.9, "glide": 50.0, "wukong": 99.9, "vqdm": 49.9, "biggan": 49.9, "avg": 68.7 },
+    { "method": "GramNet", "midjourney": 54.2, "sd14": 99.2, "sd15": 99.1, "adm": 50.3, "glide": 54.6, "wukong": 98.9, "vqdm": 50.8, "biggan": 51.7, "avg": 69.9 },
+    { "method": "GenDet (SOTA)", "midjourney": 76.4, "sd14": 99.9, "sd15": 99.8, "adm": 68.3, "glide": 74.2, "wukong": 99.2, "vqdm": 71.5, "biggan": 69.1, "avg": 82.3 }
+  ],
+  "table4_cross_val": [
+    { "method": "ResNet-50", "midjourney": 59.0, "sd14": 72.3, "sd15": 72.4, "adm": 59.7, "glide": 73.1, "wukong": 71.4, "vqdm": 60.9, "biggan": 66.6, "avg": 66.9 },
+    { "method": "DeiT-S", "midjourney": 60.7, "sd14": 74.2, "sd15": 74.2, "adm": 59.5, "glide": 71.1, "wukong": 73.1, "vqdm": 61.7, "biggan": 66.3, "avg": 67.6 },
+    { "method": "Swin-T", "midjourney": 61.7, "sd14": 76.0, "sd15": 76.1, "adm": 61.3, "glide": 76.9, "wukong": 75.1, "vqdm": 65.8, "biggan": 69.5, "avg": 70.3 },
+    { "method": "CNNSpot", "midjourney": 58.2, "sd14": 70.3, "sd15": 70.2, "adm": 57.0, "glide": 57.1, "wukong": 67.7, "vqdm": 56.7, "biggan": 56.6, "avg": 61.7 },
+    { "method": "Spec", "midjourney": 56.7, "sd14": 72.4, "sd15": 72.3, "adm": 57.9, "glide": 65.4, "wukong": 70.3, "vqdm": 61.7, "biggan": 64.3, "avg": 65.1 },
+    { "method": "F3Net", "midjourney": 55.1, "sd14": 73.1, "sd15": 73.1, "adm": 66.5, "glide": 57.8, "wukong": 72.3, "vqdm": 62.1, "biggan": 56.5, "avg": 64.6 },
+    { "method": "GramNet", "midjourney": 58.1, "sd14": 72.8, "sd15": 72.7, "adm": 58.7, "glide": 65.3, "wukong": 71.3, "vqdm": 57.8, "biggan": 61.2, "avg": 64.7 }
+  ],
+  "table5_degradation": [
+    { "method": "ResNet-50", "lr112": 96.2, "lr64": 57.4, "jpeg65": 51.9, "jpeg30": 51.2, "blur3": 97.9, "blur5": 69.4, "avg": 70.6 },
+    { "method": "DeiT-S", "lr112": 97.1, "lr64": 54.0, "jpeg65": 55.6, "jpeg30": 50.5, "blur3": 94.4, "blur5": 67.2, "avg": 69.8 },
+    { "method": "Swin-T", "lr112": 97.4, "lr64": 54.6, "jpeg65": 52.5, "jpeg30": 50.9, "blur3": 94.5, "blur5": 52.5, "avg": 67.0 },
+    { "method": "CNNSpot", "lr112": 50.0, "lr64": 50.0, "jpeg65": 97.3, "jpeg30": 97.3, "blur3": 97.4, "blur5": 77.9, "avg": 78.3 },
+    { "method": "Spec", "lr112": 50.0, "lr64": 49.9, "jpeg65": 50.8, "jpeg30": 50.4, "blur3": 49.9, "blur5": 49.9, "avg": 50.1 },
+    { "method": "F3Net", "lr112": 50.0, "lr64": 50.0, "jpeg65": 89.0, "jpeg30": 74.4, "blur3": 57.9, "blur5": 51.7, "avg": 62.1 },
+    { "method": "GramNet", "lr112": 98.8, "lr64": 94.9, "jpeg65": 68.8, "jpeg30": 53.4, "blur3": 95.9, "blur5": 81.6, "avg": 82.2 }
+  ],
+  "visualizer_samples": [
+    {
+      "id": "dog",
+      "category": "Golden Retriever (ImageNet #207)",
+      "classId": "n02099712",
+      "generator": "Midjourney",
+      "realPrompt": "ImageNet authentic photograph: golden retriever sitting outdoors in natural sunlight",
+      "fakePrompt": "Midjourney v5: macro photography portrait of golden retriever with cinematic lighting, 8k resolution",
+      "artifacts": "High saturation, over-smoothed eye reflections, unnatural fur edge micro-gradients, high-frequency spatial coherence signature.",
+      "realImg": "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1618265340524-7e88c0356e40?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "butterfly",
+      "category": "Monarch Butterfly (ImageNet #323)",
+      "classId": "n02279972",
+      "generator": "Stable Diffusion V1.5",
+      "realPrompt": "ImageNet authentic photograph: monarch butterfly resting on orange flower petals",
+      "fakePrompt": "Stable Diffusion v1.5: vibrant monarch butterfly on botanical garden flower, hyperdetailed",
+      "artifacts": "Wing vein asymmetric topology anomalies, latent space noise residual peaks in FFT spectrum, color bleed on wing borders.",
+      "realImg": "https://images.unsplash.com/photo-1557925923-cd4648e211a0?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "car",
+      "category": "Sports Car (ImageNet #817)",
+      "classId": "n04285008",
+      "generator": "ADM (Guided Diffusion)",
+      "realPrompt": "ImageNet authentic photograph: red sports car driving on asphalt road with natural shadows",
+      "fakePrompt": "ADM: red coupe supercar, high quality studio photo, realistic reflection",
+      "artifacts": "Tire tread pattern repetition inconsistencies, wheel rim geometry distortion, guided diffusion high-frequency noise variance.",
+      "realImg": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "bird",
+      "category": "Toucan (ImageNet #96)",
+      "classId": "n01847000",
+      "generator": "GLIDE",
+      "realPrompt": "ImageNet authentic photograph: ramphastos toco toucan perching on tropical rainforest tree",
+      "fakePrompt": "GLIDE: a detailed photo of a toucan in a rainforest",
+      "artifacts": "Beak texture banding artifacts, discrete diffusion noise residue, softened background transition gradients.",
+      "realImg": "https://images.unsplash.com/photo-1550853024-fae8cd4be47f?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1598439210625-5067c578f3f6?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "coffee",
+      "category": "Coffee Cup (ImageNet #504)",
+      "classId": "n07920052",
+      "generator": "VQDM (VQ-Diffusion)",
+      "realPrompt": "ImageNet authentic photograph: ceramic white coffee cup on wooden table with latte art",
+      "fakePrompt": "VQ-Diffusion: ceramic cup filled with coffee on table",
+      "artifacts": "Discrete codebook quantization blockiness, latte foam concentric circular symmetry errors, specular lighting mismatch.",
+      "realImg": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "volcano",
+      "category": "Volcano (ImageNet #980)",
+      "classId": "n09472597",
+      "generator": "BigGAN",
+      "realPrompt": "ImageNet authentic photograph: active volcanic eruption with smoke and ash mountain landscape",
+      "fakePrompt": "BigGAN 256x256: class 980 volcano synthesis conditional vector",
+      "artifacts": "GAN spectral peaks (checkerboard grid in frequency spectrum), low-resolution boundary blending, cloud texture repetition.",
+      "realImg": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80",
+      "fakeImg": "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?auto=format&fit=crop&w=900&q=80"
+    }
+  ]
+}
