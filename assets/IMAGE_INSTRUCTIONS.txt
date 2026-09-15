@@ -1,0 +1,26 @@
+================================================================================
+              SAVE THE SIGNALSCOPE POSTER IMAGE HERE
+================================================================================
+
+File Name Required: signalscope-poster.jpg
+
+Location: d:\demo1\assets\signalscope-poster.jpg
+
+Source Options:
+1. Right-click the poster image in your chat and "Save Image As..."
+2. Download from Google Drive: 
+   https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link
+
+The image shows:
+- LJIET branding at top
+- SignalScope logo and name
+- "TELLING REAL FROM SYNTHETIC" tagline
+- Laptop mockup showing the application interface
+- Key features section (INPUT, ANALYSIS, DETECTION, EXPLANATION, EXTRA INSIGHTS)
+- Sample outputs showing REAL vs AI-GENERATED detection
+- Impact statements
+- "BUILT BY STUDENTS FOR A SAFER DIGITAL TOMORROW"
+
+Once saved, the README will automatically display this poster as the banner!
+
+================================================================================
