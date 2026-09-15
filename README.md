@@ -1,19 +1,31 @@
-# 🔍 SignalScope
-
 <div align="center">
 
-![SignalScope Banner](https://drive.google.com/uc?export=view&id=1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG)
+# 🔍 SignalScope
 
-### Telling Real From Synthetic
+<a href="https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link">
+  <img src="./assets/signalscope-poster.jpg" alt="SignalScope - AI Powered Image Authenticity Checker" width="100%">
+</a>
+
+<br/>
+
+### **Telling Real From Synthetic**
 **AI-Powered Image Authenticity Checker**
 
-[![SIH 2026](https://img.shields.io/badge/SIH--2026-Project-3b82f6?style=flat-square)](https://sih.gov.in/)
-[![LJIET](https://img.shields.io/badge/LJIET-L.J.%20Institute-1e40af?style=flat-square)](https://ljku.edu.in/)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![ROC-AUC](https://img.shields.io/badge/ROC--AUC-61.46%25-22c55e?style=flat-square)](/)
+[![SIH 2026](https://img.shields.io/badge/SIH--2026-Project-3b82f6?style=for-the-badge)](https://sih.gov.in/)
+[![LJIET](https://img.shields.io/badge/LJIET-L.J.%20Institute-1e40af?style=for-the-badge)](https://ljku.edu.in/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![ROC-AUC](https://img.shields.io/badge/ROC--AUC-61.46%25-22c55e?style=for-the-badge)](/)
 
-[🎬 Watch Demo](https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link) • [📖 Documentation](#-table-of-contents) • [🚀 Quick Start](#-quick-start)
+<br/>
+
+## 🎬 **[▶️ Watch Full Demo Video on Google Drive](https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link)**
+
+<br/>
+
+[📖 Documentation](#-table-of-contents) • [🚀 Quick Start](#-quick-start) • [📊 Performance](#-model-performance) • [✨ Features](#-key-features)
+
+<br/>
 
 </div>
 
