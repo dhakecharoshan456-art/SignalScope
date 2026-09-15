@@ -373,8 +373,8 @@ SignalScope implements **100% of the mandatory core task and all 7 optional bonu
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/dhakecharoshan456-art/demo.git
-cd demo
+git clone https://github.com/dhakecharoshan456-art/SignalScope.git
+cd SignalScope
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -546,7 +546,7 @@ L. J. Institute of Engineering and Technology
 
 **SignalScope AI — SIH 2026**
 
-[🎬 Watch Demo](https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link) • [📧 Contact](#) • [⭐ Star on GitHub](https://github.com/dhakecharoshan456-art/demo)
+[🎬 Watch Demo](https://drive.google.com/file/d/1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG/view?usp=drive_link) • [📧 Contact](#) • [⭐ Star on GitHub](https://github.com/dhakecharoshan456-art/SignalScope)
 
 ---
 
