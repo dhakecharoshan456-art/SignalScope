@@ -1,5 +1,9 @@
 \<div align="center">
 
+\<img src="https\://drive.google.com/uc?export=view&id=1yJ33enRmr7QNFd_cwelGD9wn7OvehpgG" alt="SignalScope - AI Powered Image Authenticity Checker" width="100%" />
+
+\<br/>
+
 \<img src="https\://readme-typing-svg.demolab.com?font=Outfit&weight=800&size=42&pause=1000&color=3B82F6&center=true&vCenter=true&width=800&height=80&lines=%F0%9F%94%8D+SignalScope;Telling+Real+From+Synthetic;AI+Powered+Image+Authenticity+Checker" alt="SignalScope - Telling Real From Synthetic" />
 
 \<br/>
