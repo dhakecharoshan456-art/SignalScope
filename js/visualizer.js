@@ -437,7 +437,12 @@ class VisualizerManager {
       window.SignalScopeBonus.renderProvenanceMetadata(this.selectedFile ? this.selectedFile.name : 'upload.png', isAI);
 
       // 6. Module E: Multimodal Caption Consistency
-      window.SignalScopeBonus.checkMultimodalConsistency(captionVal, isAI);
+      window.SignalScopeBonus.checkMultimodalConsistency(captionVal, isAI, this.selectedFile);
+
+      // 7. Module G: Active Defence & Adversarial Mitigation
+      if (this.selectedFile) {
+        window.SignalScopeBonus.runAdversarialTest(this.selectedFile);
+      }
     }
   }
 

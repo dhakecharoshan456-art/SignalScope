@@ -201,6 +201,7 @@ def run_checks():
     print("\n[Check 11/12] Authoritative /report Deliverables...")
     report_files = [
         "report/model_report.md",
+        "report/one_page_model_report.md",
         "report/evaluation_summary.md",
         "report/methodology.md",
         "report/limitations.md"

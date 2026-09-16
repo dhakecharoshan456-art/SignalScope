@@ -25,3 +25,7 @@ ENV/
 
 # Temporary run logs
 *.log
+
+# Testing scratch buffers
+scratch/
+test_temp/
